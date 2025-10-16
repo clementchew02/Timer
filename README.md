@@ -30,10 +30,25 @@ Navigate to the root project directory and install the development tool concurre
 # In the root directory (where backend/ and frontend/ reside)
 npm install
 
-(Optional) Add Custom Alarm Sound
+2. Install Sub-Project Dependencies
+Install dependencies for both the server and the client.
+# Backend dependencies
+cd backend
+npm install
+
+# Frontend dependencies
+cd ../frontend
+npm install socket.io-client
+npm install
+
+
+3. (optional) Add Custom Alarm Sound
 For the alarm feature to work, place your custom MP3 file in the correct location:
+
 Rename your alarm sound file to alarm.mp3.
+
 Place it inside the public assets folder: frontend/public/alarm.mp3.
+
 ▶️ Running the Application
 Once all dependencies are installed, you only need one command from the root project directory:
 npm start
