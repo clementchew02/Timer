@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-timer-app",
+  "version": "1.0.0",
+  "description": "Real-time timer application using Nuxt 3 (Vue 3) and Node.js with Socket.IO.",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \"npm run start:backend\" \"npm run start:frontend\"",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "nuxt",
+    "node",
+    "socket.io",
+    "concurrently"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
