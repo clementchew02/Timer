@@ -28,22 +28,9 @@ Follow these steps to set up and run the application. You must have Node.js and 
 1. Install Global Dependencies
 Navigate to the root project directory and install the development tool concurrently, which allows running both servers with one command.
 # In the root directory (where backend/ and frontend/ reside)
-npm install --save-dev concurrently
-
-
-2. Install Sub-Project Dependencies
-Install dependencies for both the server and the client.
-# Backend dependencies
-cd backend
 npm install
 
-# Frontend dependencies
-cd ../frontend
-npm install socket.io-client
-npm install
-
-
-3. Add Custom Alarm Sound
+(Optional) Add Custom Alarm Sound
 For the alarm feature to work, place your custom MP3 file in the correct location:
 Rename your alarm sound file to alarm.mp3.
 Place it inside the public assets folder: frontend/public/alarm.mp3.
@@ -58,20 +45,5 @@ nuxt dev (Frontend on http://localhost)
 Accessing the App
 Open your web browser and navigate to:
 http://localhost
-🗂️ Project Structure
-The project follows a clean separation of concerns:
-/
-├── package.json          <-- Root configuration for 'npm start' (concurrently)
-├── backend/
-│   ├── app.js            <-- Core Node.js server and Socket.IO logic
-│   └── package.json      <-- Backend dependencies
-└── frontend/
-    ├── app.vue           <-- Main application layout
-    ├── pages/
-    │   └── index.vue     <-- Main page displaying all timers
-    ├── components/
-    │   └── RoomTimer.vue <-- Timer display, controls, and alarm logic
-    ├── composables/
-    │   └── useSocket.js  <-- Socket.IO connection setup
-    └── package.json      <-- Frontend dependencies (Nuxt, Vue)
+
 
